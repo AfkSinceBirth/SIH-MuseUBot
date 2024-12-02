@@ -1,0 +1,68 @@
+/* Navbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+.navbar a {
+  text-decoration: none; /* This will remove the underline */
+  color: inherit; /* Ensures the color is inherited from parent */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px; /* Adjust the gap to ensure equidistance */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.navbar-theme {
+  cursor: pointer;
+}
+
+/* Burger Menu - Mobile View */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.burger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}

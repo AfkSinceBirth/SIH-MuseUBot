@@ -1,0 +1,136 @@
+.ticket-booking-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+.ticket-booking-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+/* General styles */
+
+/* Header style */
+
+/* List styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual ticket item styling */
+.ticket {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect on tickets */
+.ticket:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Now button styling */
+.book-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for Book Now button */
+.book-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Message styling when no tickets are available */
+p {
+  color: #888;
+  font-size: 18px;
+  text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    border-color: #007bff;
+  }
+.btn-container{
+    margin: 10px 0;
+}
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+  
+ /* Responsive Design */
+ @media (max-width: 768px) {
+    .ticket-booking-container {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ticket-booking-container {
+      padding: 10px;
+    }
+  
+    .form-group input,
+    .form-group select {
+      padding: 8px;
+      font-size: 12px;
+    }
+  
+    .submit-btn {
+      padding: 8px 10px;
+      font-size: 14px;
+    }
+  }
+  

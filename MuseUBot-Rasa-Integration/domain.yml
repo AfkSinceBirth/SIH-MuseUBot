@@ -1,0 +1,66 @@
+version: "3.1"
+
+intents:
+  - greet
+  - book_ticket
+  - inquire_availability
+  - provide_state
+  - provide_city
+  - provide_date
+  - thank_you
+  - goodbye
+  - bot_challenge
+  - reset_conversation
+
+entities:
+  - state
+  - city
+  - date
+
+slots:
+  state:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: state
+  city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city
+  date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_ticket_status:
+  - text: "We have tickets available."
+
+  utter_thank_you:
+  - text: "You're welcome!"
+
+  utter_goodbye:
+  - text: "Goodbye! Have a great day!"
+
+  utter_iamabot:
+  - text: "I am MuseUBot, here to assist you with booking museum tickets."
+
+  utter_confirmation:
+  - text: "Your booking has been confirmed!"
+
+  utter_ask_missing_details:
+  - text: "Please provide the missing details: state, city, and date."
+
+  utter_reset:
+  - text: "The conversation has been reset. How can I assist you further?"
+
+actions:
+  - action_check_availability
+  - action_process_booking
+  - action_extract_details
+  - action_reset_conversation

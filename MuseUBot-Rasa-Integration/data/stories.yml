@@ -1,0 +1,66 @@
+version: "3.1"
+
+stories:
+- story: user books a ticket
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+  - intent: book_ticket
+  - action: action_extract_details
+  - slot_was_set:
+      - state: "Maharashtra"
+      - city: "Mumbai"
+      - date: "December 25th"
+  - action: utter_confirmation
+
+- story: user checks availability
+  steps:
+  - intent: inquire_availability
+  - action: action_extract_details
+  - slot_was_set:
+      - state: "Delhi"
+      - city: "New Delhi"
+      - date: "tomorrow"
+  - action: action_check_availability
+  - action: utter_ticket_status
+
+
+
+- story: user provides state
+  steps:
+  - intent: provide_state
+  - slot_was_set:
+      - state: "Maharashtra"
+  - action: utter_ask_missing_details
+
+- story: user provides city
+  steps:
+  - intent: provide_city
+  - slot_was_set:
+      - city: "Mumbai"
+  - action: utter_ask_missing_details
+
+- story: user provides date
+  steps:
+  - intent: provide_date
+  - slot_was_set:
+      - date: "December 25th"
+  - action: action_check_availability
+  - action: utter_ticket_status
+
+- story: user says thank you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- story: user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: reset conversation
+  steps:
+  - intent: reset_conversation
+  - action: action_reset_conversation
+  - action: utter_reset

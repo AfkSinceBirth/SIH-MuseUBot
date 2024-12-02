@@ -1,0 +1,80 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hello
+    - hi
+    - hey
+    - good morning
+    - good evening
+
+- intent: book_ticket
+  examples: |
+    - I want to book a ticket in [Maharashtra](state) for [Mumbai](city) on [December 25th](date).
+    - Can I book tickets in [Delhi](state) for [New Delhi](city) on [tomorrow](date)?
+    - Book tickets in [Karnataka](state) for [Bangalore](city) on [April 14th](date).
+    - I need tickets for [Hyderabad](city) in [Telangana](state) on [December 25th](date).
+    - How do I book a ticket for [Kolkata](city) in [West Bengal](state) on [next Monday](date)?
+    - Can I get tickets for [Chennai](city) in [Tamil Nadu](state) on [Sunday](date)?
+    - I want to reserve tickets in [Rajasthan](state) for [Jaipur](city) on [August 15th](date).
+- intent: inquire_availability
+  examples: |
+    - Are there any tickets available for [today](date)?
+    - Can I get a ticket for [tomorrow](date)?
+    - Is there availability for [next weekend](date)?
+    - Are there tickets left for [next Friday](date)?
+    - Can I book tickets for [next month](date)?
+
+- intent: provide_state
+  examples: |
+    - The state is [Maharashtra](state)
+    - It's in [Tamil Nadu](state)
+    - I am looking for [Karnataka](state)
+    - The state should be [Gujarat](state)
+
+- intent: provide_city
+  examples: |
+    - The city is [Mumbai](city)
+    - I need tickets for [Bangalore](city)
+    - I'm looking to book in [Chennai](city)
+    - It's for [Ahmedabad](city)
+
+- intent: provide_date
+  examples: |
+    - [25th December](date)
+    - The date is [December 25th](date)
+    - I need it for [tomorrow](date)
+    - Looking for [April 14th](date)
+    - The booking date is [next Monday](date)
+
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - appreciate it
+    - that's helpful
+    - much obliged
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - see you later
+    - bye
+    - have a great day
+
+- intent: bot_challenge
+  examples: |
+    - Are you a bot?
+    - Are you human?
+    - do you have emotions?
+    - who are you?
+    - what can you do?
+    - what are you?
+
+- intent: reset_conversation
+  examples: |
+    - reset
+    - restart
+    - start over
+    - clear everything
